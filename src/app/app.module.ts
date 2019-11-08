@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +21,8 @@ import * as modules from '../modules';
   ],
   providers: [
     shared.CartService,
-    shared.ProductsService
+    shared.ProductsService,
+    CurrencyPipe
   ],
   bootstrap: [AppComponent]
 })

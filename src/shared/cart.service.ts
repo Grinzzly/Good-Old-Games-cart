@@ -24,7 +24,7 @@ export class CartService extends BaseComponent{
     this.productsInCart = this.productsInCart.filter(product => product.id !== id);
   };
 
-  public isInCart(id: number): boolean {
+  public isInCart = (id: number): boolean => {
     return !!(this.productsInCart && this.productsInCart.find(product => product.id === id));
   };
 

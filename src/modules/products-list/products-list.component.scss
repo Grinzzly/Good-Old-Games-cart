@@ -58,9 +58,11 @@
     &--active {
       color: $cl-grey-light-400;
       border: 1px solid $cl-grey-light-400;
+
       span {
         display: none;
       }
+
       &:after {
         content: "In Cart"
       }

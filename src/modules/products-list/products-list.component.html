@@ -8,9 +8,9 @@
       <p class="product__title">{{ product.title }}</p>
       <button
         (click)="addProduct(product.id)"
-        [disabled]="isInCart(product.id)"
-        class="{{isInCart(1) ? 'product__badge--active' : 'product__badge'}}">
-          <span>{{ product.price | currency }}</span>
+        [disabled]="isInCart(product.id) || isOwned(product.id)"
+        [classList]="isInCart(product.id) ? 'product__badge product__badge--active' : 'product__badge'">
+          <span>{{ getButtonBadge(product) }}</span>
       </button>
       <span *ngIf="product.discount" class="product__badge product__badge--success">-{{ product.discount }}%</span>
     </div>
