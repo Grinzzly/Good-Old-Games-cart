@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "https://github.com/Grinzzly/",
   "repository": "https://github.com/Grinzzly/Good-Old-Games-cart",
-  "homepage": "",
+  "homepage": "https://good-old-games.netlify.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
