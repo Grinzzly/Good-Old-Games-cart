@@ -1,0 +1,14 @@
+<div class="product">
+  <picture class="product__image">
+    <source srcset="{{ product.image }}" type="image/jpeg">
+    <img src="{{ product.image }}" alt="{{ product.title }}">
+  </picture>
+  <p [classList]="owned ? 'product__title product__title--owned' : 'product__title'">{{ product.title }}</p>
+  <button
+    (click)="addProduct(product.id)"
+    [disabled]="inCart || owned"
+    [classList]="classList">
+      <span>{{ buttonBadge }}</span>
+  </button>
+  <span *ngIf="product.discount" class="product__badge product__badge--success">-{{ product.discount }}%</span>
+</div>

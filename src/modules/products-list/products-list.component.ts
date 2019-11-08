@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
 
 import { ProductsService, Product } from '../../shared';
 import { BaseComponent } from '../../shared/base.component';
@@ -20,8 +19,7 @@ export class ProductsListComponent extends BaseComponent {
   public ownedProductIds: number[] = [];
 
   constructor(
-    private productsService: ProductsService,
-    private currencyPipe: CurrencyPipe
+    private productsService: ProductsService
   ) {
     super();
 
@@ -32,18 +30,6 @@ export class ProductsListComponent extends BaseComponent {
     this.addSubscription(this.productsService.ownedProductIds$.subscribe(productIds => {
       this.ownedProductIds = productIds;
     }));
-  }
-
-  public getButtonBadge(product: Product): string {
-    if (this.isOwned(product.id)) {
-      return 'OWNED';
-    }
-
-    if (this.isInCart(product.id)) {
-      return 'IN CART';
-    }
-
-    return this.currencyPipe.transform(product.price, 'USD', 'symbol');
   }
 
   public isOwned(id: number): boolean {

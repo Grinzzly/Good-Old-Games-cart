@@ -13,6 +13,7 @@ import * as modules from '../modules';
     AppComponent,
     modules.CartViewComponent,
     modules.JumbotronComponent,
+    modules.ProductComponent,
     modules.ProductsListComponent
   ],
   imports: [

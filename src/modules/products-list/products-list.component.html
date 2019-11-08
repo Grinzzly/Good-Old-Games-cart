@@ -1,18 +1,11 @@
 <div class="products">
   <div class="products__container">
-    <div class="product" *ngFor="let product of products">
-      <picture class="product__image">
-        <source srcset="{{ product.image }}" type="image/jpeg">
-        <img src="{{ product.image }}" alt="{{ product.title }}">
-      </picture>
-      <p class="product__title">{{ product.title }}</p>
-      <button
-        (click)="addProduct(product.id)"
-        [disabled]="isInCart(product.id) || isOwned(product.id)"
-        [classList]="isInCart(product.id) ? 'product__badge product__badge--active' : 'product__badge'">
-          <span>{{ getButtonBadge(product) }}</span>
-      </button>
-      <span *ngIf="product.discount" class="product__badge product__badge--success">-{{ product.discount }}%</span>
-    </div>
+    <product
+      *ngFor="let product of products"
+      [addProduct]="addProduct"
+      [inCart]="isInCart(product.id)"
+      [owned]="isOwned(product.id)"
+      [product]="product"
+    ></product>
   </div>
 </div>

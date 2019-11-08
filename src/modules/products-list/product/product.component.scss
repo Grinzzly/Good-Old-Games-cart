@@ -1,0 +1,71 @@
+@import "../../../app/styles/variables";
+
+.product {
+  background-color: $cl-grey-light-200;
+  float: left;
+  margin: 20px 10px 0 10px;
+  width: calc(50% - 20px);
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: $fontSemiBold;
+    text-transform: uppercase;
+    line-height: 15px;
+    height: 30px;
+    color: $cl-grey-dark-500;
+    padding: 8px 8px 0 8px;
+    overflow: hidden;
+    margin: 0;
+
+    &--owned {
+      color: $cl-grey-light-300;
+    }
+  }
+
+  &__badge {
+    float: right;
+    border: 1px solid $cl-grey-light-900;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 8px 8px 8px 0;
+    color: $cl-grey-light-900;
+    font-size: 13px;
+    font-weight: $fontSemiBold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $cl-grey-light-200;
+
+    &--success {
+      border: 1px solid $cl-green-500;
+      background-color: $cl-green-500;
+      color: $cl-grey-light-100;
+      cursor: default;
+    }
+
+    &--in-cart {
+      cursor: default;
+      color: $cl-grey-light-800;
+      border: 1px solid $cl-grey-light-800;
+    }
+
+    &--owned {
+      cursor: default;
+      color: $cl-grey-light-300;
+      border: 1px solid $cl-grey-light-300;
+    }
+  }
+
+  @media(min-width: $breakpointSmall) {
+    width: calc(33.33% - 20px);
+  }
+
+  @media(min-width: $breakpointMedium) {
+    width: calc(20% - 20px);
+  }
+}
