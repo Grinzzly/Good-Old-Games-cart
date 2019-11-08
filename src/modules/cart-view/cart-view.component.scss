@@ -3,7 +3,7 @@
 .cart-view {
   height: 60px;
   line-height: 60px;
-  background: $colorSilverLight;
+  background: $cl-grey-light-100;
   font-size: 15px;
   font-weight: $fontBold;
   padding: 0 5px 0 10px;
@@ -30,7 +30,7 @@
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-    background: linear-gradient(to bottom, $colorViolet, $colorBlueViolet);
+    background: linear-gradient(to bottom, $cl-violet-200, $cl-violet-100);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0);
     font-size: 14px;
     font-weight: $fontSemiBold;
@@ -47,8 +47,8 @@
 
 .cart-item {
   padding: 5px;
-  background: $colorSilverLight;
-  border-top: 1px solid $colorSilverDark;
+  background: $cl-grey-light-100;
+  border-top: 1px solid $cl-grey-light-400;
 
   &__image {
     float: left;

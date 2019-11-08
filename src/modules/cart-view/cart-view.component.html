@@ -1,6 +1,6 @@
 <div class="cart-view">
-  <div class="cart-view__info">{{cartService.productsInCart.length}} ITEMS <span>IN CART</span></div>
-  <div class="cart-view__price">{{totalSum | currency}}</div>
+  <div class="cart-view__info"><span>{{ cartInfo }}</span></div>
+  <div class="cart-view__price">{{ totalSum | currency }}</div>
   <button
     class="cart-view__btn"
     (click)="cartService.clearCart()"
@@ -8,10 +8,10 @@
   >Clear cart</button>
 </div>
 <div class="cart-item" *ngFor="let product of cartService.productsInCart ; trackBy: trackByIndex" >
-  <img class="cart-item__image" src="{{product.image}}"/>
+  <img class="cart-item__image" src="{{ product.image }}"/>
   <div class="cart-item__content">
-    <p>{{product.title}}</p>
+    <p>{{ product.title }}</p>
     <a (click)="cartService.removeProduct(product.id)">Remove</a>
   </div>
-  <span class="cart-item__price">{{product.price | currency}}</span>
+  <span class="cart-item__price">{{ product.price | currency }}</span>
 </div>

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import { CartService } from '../shared';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   public countAddedProducts: number;

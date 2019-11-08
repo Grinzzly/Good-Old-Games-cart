@@ -9,10 +9,10 @@ $cl-blue-700: #005ba1;
 $cl-blue-800: #124d8e;
 $cl-blue-900: #00f;
 
-$cl-grey-light-100: #f4f4f4;
-$cl-grey-light-200: #efefef;
+$cl-grey-light-100: #f7f7f7;
+$cl-grey-light-200: #e2e2e2;
 $cl-grey-light-300: #ddd;
-$cl-grey-light-400: #ccc;
+$cl-grey-light-400: #c2c2c2;
 $cl-grey-light-500: #bababa;
 $cl-grey-light-600: #a6a6a6;
 $cl-grey-light-700: #969696;
@@ -22,6 +22,7 @@ $cl-grey-dark-100: #626b71;
 $cl-grey-dark-200: #464f55;
 $cl-grey-dark-300: #3a4044;
 $cl-grey-dark-400: #333;
+$cl-grey-dark-500: #262626;
 
 $cl-grey-blue-100: #748490;
 $cl-grey-blue-200: #3f6476;
@@ -38,12 +39,15 @@ $cl-green-100: #b8e6cb;
 $cl-green-200: #7fd4a6;
 $cl-green-300: #49c280;
 $cl-green-400: #16a25c;
-$cl-green-500: #48976d;
+$cl-green-500: #00905e;
 $cl-green-600: #0f894c;
 
 $cl-yellow-100: #ffffd9;
 $cl-yellow-200: #fff399;
 $cl-yellow-300: #e6e600;
+
+$cl-violet-100: #855aba;
+$cl-violet-200: #b359e1;
 
 $cl-orange: #f90;
 
@@ -57,15 +61,6 @@ $cl-black: #000;
 $cl-white: #fff;
 
 // GOG-common
-$colorSuccess: #00905e;
-$colorSilver: #dedede;
-$colorSilverLight: #f7f7f7;
-$colorSilverDark: #c2c2c2;
-$colorDark: #262626;
-$colorLight: #ffffff;
-$colorViolet: #b359e1;
-$colorBlueViolet: #855aba;
-
 $breakpointMedium: 1060px;
 $breakpointSmall: 640px;
 

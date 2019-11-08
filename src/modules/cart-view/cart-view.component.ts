@@ -16,11 +16,22 @@ export class CartViewComponent {
     return index;
   }
 
-  public get totalSum(): number {
-  if (!this.cartService.productsInCart.length) return 0;
+  public get cartInfo(): string {
+    switch (this.cartService.productsInCart.length) {
+      case 0:
+        return 'CART IS EMPTY';
+      case 1:
+        return '1 ITEM IN CART';
+      default:
+        return `${this.cartService.productsInCart.length} ITEMS IN CART`;
+    }
+  }
 
-  return this.cartService.productsInCart
-    .map(product => product.price)
-    .reduce((prev, next) => prev + next);
-  };
+  public get totalSum(): number {
+    if (!this.cartService.productsInCart.length) return 0;
+
+    return this.cartService.productsInCart
+      .map(product => product.price)
+      .reduce((prev, next) => prev + next);
+    };
 }

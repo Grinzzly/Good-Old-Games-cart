@@ -1,0 +1,29 @@
+@import "../../app/styles/variables";
+
+.jumbotron {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  width: $breakpointMedium;
+
+  &__title {
+    color: $cl-grey-dark-500;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: $fontBold;
+    padding: 20px 5px;
+    margin: 0;
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media(min-width: $breakpointMedium) {
+    &__title {
+      padding: 40px 0 20px 0;
+    }
+  }
+}

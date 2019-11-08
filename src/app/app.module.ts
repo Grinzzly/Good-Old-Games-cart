@@ -9,7 +9,8 @@ import * as modules from '../modules';
 @NgModule({
   declarations: [
     AppComponent,
-    modules.CartViewComponent
+    modules.CartViewComponent,
+    modules.JumbotronComponent,
   ],
   imports: [
     BrowserModule
