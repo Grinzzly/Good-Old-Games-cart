@@ -5,14 +5,20 @@ import { CartService } from '../shared';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.scss']
 })
 export class AppComponent {
-  public title: string;
+  public countAddedProducts: number;
+
+  public isCartOpen: boolean = false;
 
   constructor(
     private cartService: CartService
   ){
-    this.title = cartService.title;
+    this.countAddedProducts = this.cartService.productsInCart.length;
+  }
+
+  public toggleCart() {
+    this.isCartOpen = !this.isCartOpen;
   }
 }

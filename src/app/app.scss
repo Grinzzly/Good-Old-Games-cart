@@ -1,0 +1,73 @@
+@import "styles/variables";
+
+body {
+  padding-top: 60px;
+  background-color: $colorSilverDark;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  height: 56px;
+  width: 100%;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.2);
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+    width: $breakpointMedium;
+  }
+
+  &__logo {
+    float: left;
+    padding: 8px 5px;
+  }
+
+  &__cart {
+    float: right;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 56px;
+
+    &:hover {
+      cursor: pointer;
+      width: 54px;
+      background-color: $colorSilverLight;
+      border-left: 1px solid $colorSilverDark;
+      border-right: 1px solid $colorSilverDark;
+    }
+
+    span {
+      font-size: 13px;
+      font-weight: $fontSemiBold;
+      display: inline-block;
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  @media(min-width: $breakpointMedium) {
+    &__logo {
+      padding: 8px 0;
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+cart-view {
+  float: right;
+  max-width: 100%;
+  width: 100%;
+
+  @media(min-width: $breakpointSmall) {
+    width: 370px;
+  }
+}

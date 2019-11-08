@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "price": "9.99",
+    "title": "ODDWORLD: STRANGER'S WRATH",
+    "image": "assets/images/oddworld-strangers-wrath.jpg"
+  },
+  {
+    "id": 2,
+    "price": "4.99",
+    "title": "CHAOS ON DEPONIA",
+    "image": "assets/images/chaos-on-deponia.jpg"
+  },
+  {
+    "id": 3,
+    "price": "9.99",
+    "title": "THE SETTLERS 2: GOLD EDITION",
+    "image": "assets/images/the-settlers-2-gold-edition.jpg"
+  },
+  {
+    "id": 4,
+    "price": "4.99",
+    "title": "NEVERWINTER NIGHTS",
+    "image": "assets/images/neverwinter-nights.jpg"
+  },
+  {
+    "id": 5,
+    "price": "9.99",
+    "title": "ASSASSIN'S CREED: DIRECTOR'S CUT",
+    "image": "assets/images/assassin-creed-directors-cut.jpg"
+  }
+]

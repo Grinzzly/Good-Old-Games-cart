@@ -1,6 +1,9 @@
 {
   "name": "good-old-games-cart",
   "version": "0.0.0",
+  "author": "https://github.com/Grinzzly/",
+  "repository": "https://github.com/Grinzzly/Good-Old-Games-cart",
+  "homepage": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

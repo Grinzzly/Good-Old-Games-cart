@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import * as shared from '../shared';
+import * as modules from '../modules';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    modules.CartViewComponent
   ],
   imports: [
     BrowserModule

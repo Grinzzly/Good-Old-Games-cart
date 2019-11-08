@@ -1,0 +1,116 @@
+@import "variables";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button,
+[type="button"],
+input,
+textarea {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+* {
+  outline: none !important;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  border: 1px solid $cl-grey-light-300;
+  box-shadow: none;
+  height: 26px;
+  padding-left: 8px;
+  color: currentColor;
+
+  &:focus,
+  &.active {
+    border: 1px solid $cl-grey-light-600;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &[disabled] {
+    background-color:$cl-grey-light-500;
+  }
+
+  &[readonly],
+  &.readonly {
+    background-color: $cl-grey-light-100;
+    border: 0;
+    pointer-events: none;
+  }
+
+  // Chrome, Safari, Opera
+  &::-webkit-input-placeholder {
+    color: $cl-grey-light-400;
+    opacity: 1;
+  }
+
+  // IE10–11
+  &:-ms-input-placeholder {
+    color: $cl-grey-light-400;
+    opacity: 1;
+  }
+
+  // Edge
+  &::-ms-input-placeholder {
+    color: $cl-grey-light-400;
+    opacity: 1;
+  }
+
+  // CSS Working Draft
+  &::placeholder {
+    color: $cl-grey-light-400;
+    opacity: 1;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}

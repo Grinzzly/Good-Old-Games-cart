@@ -1,0 +1,100 @@
+@import "../../app/styles/variables";
+
+.cart-view {
+  height: 60px;
+  line-height: 60px;
+  background: $colorSilverLight;
+  font-size: 15px;
+  font-weight: $fontBold;
+  padding: 0 5px 0 10px;
+
+  &__info {
+    display: inline-block;
+    width: calc(100% - 220px);
+    span {
+      display: none;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+  }
+
+  &__btn {
+    width: 130px;
+    height: 45px;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(to bottom, $colorViolet, $colorBlueViolet);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: $fontSemiBold;
+  }
+
+  @media(min-width: $breakpointSmall) {
+    &__info {
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.cart-item {
+  padding: 5px;
+  background: $colorSilverLight;
+  border-top: 1px solid $colorSilverDark;
+
+  &__image {
+    float: left;
+    width: 100px;
+    height: 60px;
+  }
+
+  &__content {
+    float: left;
+    width: calc(100% - 160px);
+    height: 40px;
+    padding: 10px 5px;
+    font-size: 14px;
+
+    p {
+      margin: 0 0 5px 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+      max-width: 180px;
+      font-size: 13px;
+      font-weight: $fontSemiBold;
+    }
+
+    a {
+      display: none;
+      font-size: 13px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 13px;
+    float: left;
+    width: 50px;
+    line-height: 60px;
+  }
+}
