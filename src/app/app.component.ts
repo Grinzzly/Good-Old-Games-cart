@@ -9,14 +9,14 @@ import { CartService } from '../shared';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public countAddedProducts: number;
-
   public isCartOpen: boolean = false;
 
   constructor(
     private cartService: CartService
-  ){
-    this.countAddedProducts = this.cartService.productsInCart.length;
+  ){ }
+
+  public get productsAmountInCart(): number {
+    return this.cartService.productsInCart.length;
   }
 
   public toggleCart() {

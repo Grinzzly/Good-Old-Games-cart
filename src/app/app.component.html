@@ -6,7 +6,7 @@
       </a>
       <a (click)="toggleCart()" class="menu__cart" title="Cart">
         <img src="/assets/images/cart-icon.png" alt="Cart icon"/>
-        <span>{{countAddedProducts}}</span>
+        <span>{{ productsAmountInCart }}</span>
       </a>
       <div class="clearfix"></div>
       <cart-view *ngIf="isCartOpen"></cart-view>
@@ -15,3 +15,4 @@
 </header>
 
 <jumbotron></jumbotron>
+<products-list [addProduct]="cartService.addProduct" [isInCart]="cartService.isInCart"></products-list>

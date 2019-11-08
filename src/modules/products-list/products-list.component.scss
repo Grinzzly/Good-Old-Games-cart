@@ -1,29 +1,77 @@
 @import "../../app/styles/variables";
 
-.jumbotron {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 100%;
-  width: $breakpointMedium;
-
-  &__title {
-    color: $cl-grey-dark-500;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: $fontBold;
-    padding: 20px 5px;
-    margin: 0;
+.products {
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+    width: $breakpointMedium + 20px;
   }
+}
+
+.product {
+  background-color: $cl-grey-light-200;
+  float: left;
+  margin: 20px 10px 0 10px;
+  width: calc(50% - 20px);
 
   &__image {
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
 
-  @media(min-width: $breakpointMedium) {
-    &__title {
-      padding: 40px 0 20px 0;
+  &__title {
+    font-size: 14px;
+    font-weight: $fontSemiBold;
+    text-transform: uppercase;
+    line-height: 15px;
+    height: 30px;
+    color: $cl-grey-dark-500;
+    padding: 8px 8px 0 8px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &__badge {
+    float: right;
+    border: 1px solid $cl-grey-dark-500;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 8px 8px 8px 0;
+    color: $cl-grey-dark-500;
+    font-size: 13px;
+    font-weight: $fontSemiBold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $cl-grey-light-200;
+
+    &--success {
+      border: 1px solid $cl-green-500;
+      background-color: $cl-green-500;
+      color: $cl-grey-light-100;
+      cursor: default;
     }
+
+    &--active {
+      color: $cl-grey-light-400;
+      border: 1px solid $cl-grey-light-400;
+      span {
+        display: none;
+      }
+      &:after {
+        content: "In Cart"
+      }
+    }
+  }
+
+  @media(min-width: $breakpointSmall) {
+    width: calc(33.33% - 20px);
+  }
+
+  @media(min-width: $breakpointMedium) {
+    width: calc(20% - 20px);
   }
 }
