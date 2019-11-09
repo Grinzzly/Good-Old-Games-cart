@@ -12,14 +12,10 @@ export class AppComponent {
   public isCartOpen: boolean = false;
 
   constructor(
-    private cartService: CartService
+    public cartService: CartService
   ){ }
 
-  public get productsAmountInCart(): number {
-    return this.cartService.productsInCart.length;
-  }
-
-  public toggleCart() {
+  public toggleCart(): void {
     this.isCartOpen = !this.isCartOpen;
   }
 }

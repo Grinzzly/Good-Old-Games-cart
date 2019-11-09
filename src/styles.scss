@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/styles/variables";
+@import "./app/styles/fonts";
+
+body {
+  padding-top: 60px;
+  background-color: $cl-grey-light-400;
+  font-family: "Source Sans Pro", sans-serif;
+}

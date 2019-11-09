@@ -17,13 +17,17 @@
     }
   }
 
-  &__price {
+  &__price, &__price--inactive {
     display: inline-block;
     width: 80px;
     text-align: center;
   }
 
-  &__btn {
+  &__price--inactive {
+    color: $cl-grey-light-800;
+  }
+
+  &__btn, &__btn--inactive {
     width: 130px;
     height: 45px;
     border-radius: 3px;
@@ -35,6 +39,11 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0);
     font-size: 14px;
     font-weight: $fontSemiBold;
+  }
+
+  &__btn--inactive {
+    cursor: default;
+    background: linear-gradient(to bottom, $cl-grey-light-600, $cl-grey-light-300);
   }
 
   @media(min-width: $breakpointSmall) {

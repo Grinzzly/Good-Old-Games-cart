@@ -6,14 +6,16 @@
       </a>
       <a (click)="toggleCart()" [class]="isCartOpen ? 'menu__cart--active' : 'menu__cart'" title="Cart">
         <img src="/assets/images/cart-icon.png" alt="Cart icon"/>
-        <span>{{ productsAmountInCart }}</span>
+        <span>{{ cartService.amountInCart }}</span>
       </a>
       <div class="clearfix"></div>
       <cart-view *ngIf="isCartOpen"></cart-view>
-      <div *ngIf="isCartOpen" (click)="toggleCart()" class="cart-overlay"></div>
     </div>
   </nav>
 </header>
 
+<div *ngIf="isCartOpen" (click)="toggleCart()" class="cart-overlay"></div>
+
 <jumbotron></jumbotron>
+
 <products-list [addProduct]="cartService.addProduct" [isInCart]="cartService.isInCart"></products-list>

@@ -24,6 +24,10 @@ export class CartService extends BaseComponent{
     this.productsInCart = this.productsInCart.filter(product => product.id !== id);
   };
 
+  public get amountInCart(): number {
+    return this.productsInCart.length;
+  };
+
   public isInCart = (id: number): boolean => {
     return !!(this.productsInCart && this.productsInCart.find(product => product.id === id));
   };

@@ -1,10 +1,10 @@
 <div class="cart-view">
   <div class="cart-view__info"><span>{{ cartInfo }}</span></div>
-  <div class="cart-view__price">{{ totalSum | currency }}</div>
+  <div [class]="totalSum ? 'cart-view__price' : 'cart-view__price--inactive'">{{ totalSum | currency }}</div>
   <button
-    class="cart-view__btn"
+    [class]="cartService.amountInCart ? 'cart-view__btn' : 'cart-view__btn--inactive'"
     (click)="cartService.clearCart()"
-    [disabled]="cartService.productsInCart.length == 0"
+    [disabled]="cartService.amountInCart == 0"
   >Clear cart</button>
 </div>
 <div class="cart-item" *ngFor="let product of cartService.productsInCart ; trackBy: trackByIndex" >
