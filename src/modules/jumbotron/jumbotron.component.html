@@ -1,8 +1,10 @@
 <section class="jumbotron">
   <h1 class="jumbotron__title">Game of the week</h1>
   <picture class="jumbotron__image">
-    <source srcset="/assets/images/game-of-the-week.jpg" type="image/jpeg">
-    <img src="/assets/images/game-of-the-week.jpg" alt="Game of the week">
+    <img
+      defaultImage="https://via.placeholder.com/1060x370"
+      lazyLoad="/assets/images/game-of-the-week.jpg"
+      alt="Game of the week">
     <button class="jumbotron__button secret-button" (click)="bubbleIt($event)">A secret button that you should totally implement</button>
   </picture>
 </section>
